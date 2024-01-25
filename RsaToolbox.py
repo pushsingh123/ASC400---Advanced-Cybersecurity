@@ -24,5 +24,14 @@ def getModularInverse(n, b):
     if (gcd == 1):
         return y % n
     return "None found"
+
+def checkPhi(n):
+    list = []
+    for i in range(1, n+1):
+        if (isRelativePrime(i,n)):
+            list.append(i)
+    return list
+
+
 if __name__ == "__main__":
-    print(getModularInverse(5,10))
+    print(checkPhi(9))
