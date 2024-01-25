@@ -19,5 +19,10 @@ def isRelativePrime(a, b):
         return True
     return False
 
+def getModularInverse(n, b):
+    gcd, x, y = getGCD(n,b)
+    if (gcd == 1):
+        return y % n
+    return "None found"
 if __name__ == "__main__":
-    print(isRelativePrime(1,2))
+    print(getModularInverse(5,10))
