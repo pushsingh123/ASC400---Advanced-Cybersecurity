@@ -1,4 +1,4 @@
-def menu():
+def renderMenu():
     print("""     ▄████████    ▄████████    ▄████████          ███      ▄██████▄   ▄██████▄   ▄█       ▀█████████▄   ▄██████▄  ▀████    ▐████▀ 
     ███    ███   ███    ███   ███    ███      ▀█████████▄ ███    ███ ███    ███ ███         ███    ███ ███    ███   ███▌   ████▀  
     ███    ███   ███    █▀    ███    ███         ▀███▀▀██ ███    ███ ███    ███ ███         ███    ███ ███    ███    ███  ▐███    
@@ -17,10 +17,10 @@ def menu():
         case "2":
             a = int(input("a: "))
             b = int(input("b: "))
-            print(eea(a, b))
+            print(getGCD(a, b))
         case "3":
             n = int(input("n: "))
-            print(phi(n))
+            print(getPhi(n))
         case "4":
             print("func4")
 
@@ -52,7 +52,7 @@ def getModularInverse(n, b):
         return y % n
     return "None found"
 
-def checkPhi(n):
+def getPhi(n):
     list = []
     for i in range(1, n+1):
         if (isRelativePrime(i,n)):
@@ -61,4 +61,5 @@ def checkPhi(n):
 
 
 if __name__ == "__main__":
-    print(checkPhi(9))
+    while(1):
+        renderMenu()
